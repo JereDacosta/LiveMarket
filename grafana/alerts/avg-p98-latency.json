@@ -1,0 +1,98 @@
+{
+  "apiVersion": 1,
+  "groups": [
+    {
+      "orgId": 1,
+      "name": "Latency Checks every 1 minute",
+      "folder": "alerts",
+      "interval": "1m",
+      "rules": [
+        {
+          "uid": "be0oo1longagwc",
+          "title": "P.98 Requests Duration \u003e 100 ms",
+          "condition": "Is over 100 ms",
+          "data": [
+            {
+              "refId": "p98",
+              "relativeTimeRange": { "from": 300, "to": 0 },
+              "datasourceUid": "ddzicgvch9ts0c",
+              "model": {
+                "datasource": { "type": "prometheus", "uid": "ddzicgvch9ts0c" },
+                "editorMode": "code",
+                "expr": "histogram_quantile(0.98, sum(rate(http_server_request_duration_seconds_bucket{job=\"otel-collector\", instance=\"otel-collector:9464\"}[$__rate_interval])) by (le))",
+                "instant": false,
+                "interval": "",
+                "intervalMs": 15000,
+                "legendFormat": "p98",
+                "maxDataPoints": 43200,
+                "range": true,
+                "refId": "p98"
+              }
+            },
+            {
+              "refId": "avg p98 latency",
+              "relativeTimeRange": { "from": 300, "to": 0 },
+              "datasourceUid": "__expr__",
+              "model": {
+                "conditions": [
+                  {
+                    "evaluator": { "params": [], "type": "gt" },
+                    "operator": { "type": "and" },
+                    "query": { "params": ["A"] },
+                    "reducer": { "params": [], "type": "last" },
+                    "type": "query"
+                  }
+                ],
+                "datasource": { "type": "__expr__", "uid": "__expr__" },
+                "expression": "p98",
+                "intervalMs": 1000,
+                "maxDataPoints": 43200,
+                "reducer": "mean",
+                "refId": "avg p98 latency",
+                "settings": { "mode": "dropNN" },
+                "type": "reduce"
+              }
+            },
+            {
+              "refId": "Is over 100 ms",
+              "relativeTimeRange": { "from": 300, "to": 0 },
+              "datasourceUid": "__expr__",
+              "model": {
+                "conditions": [
+                  {
+                    "evaluator": { "params": [0.1], "type": "gt" },
+                    "operator": { "type": "and" },
+                    "query": { "params": ["B"] },
+                    "reducer": { "params": [], "type": "last" },
+                    "type": "query"
+                  }
+                ],
+                "datasource": { "type": "__expr__", "uid": "__expr__" },
+                "expression": "avg p98 latency",
+                "intervalMs": 1000,
+                "maxDataPoints": 43200,
+                "refId": "Is over 100 ms",
+                "type": "threshold"
+              }
+            }
+          ],
+          "dashboardUid": "KdDACDp4z",
+          "panelId": 40,
+          "noDataState": "OK",
+          "execErrState": "Error",
+          "for": "0s",
+          "annotations": {
+            "__dashboardUid__": "KdDACDp4z",
+            "__panelId__": "40",
+            "description": "",
+            "runbook_url": "",
+            "summary": ""
+          },
+          "labels": { "": "" },
+          "isPaused": false,
+          "notification_settings": { "receiver": "grafana discord webhook" }
+        }
+      ]
+    }
+  ]
+}

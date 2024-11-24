@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "d1a5b6c8-69f1-4e98-95a9-07d2e2b788cc",
+    "Title": "Halo Infinite",
+    "ReleaseDate": "2021-12-08",
+    "Genre": "First-person shooter",
+    "Price": 59.99,
+    "Description": "The legendary Halo series returns with a new campaign."
+  },
+  {
+    "Id": "a8b673c4-6a42-4538-8b27-d56f2e7c92a1",
+    "Title": "Forza Horizon 5",
+    "ReleaseDate": "2021-11-09",
+    "Genre": "Racing",
+    "Price": 59.99,
+    "Description": "An open-world racing game set in Mexico."
+  },
+  {
+    "Id": "5d98c2bc-3c6d-4694-8743-0136e7a66d78",
+    "Title": "Gears 5",
+    "ReleaseDate": "2019-09-10",
+    "Genre": "Third-person shooter",
+    "Price": 49.99,
+    "Description": "The latest in the Gears of War series."
+  },
+  {
+    "Id": "fdc0f44b-7a4d-4650-a27b-78353f2f6c97",
+    "Title": "Sea of Thieves",
+    "ReleaseDate": "2018-03-20",
+    "Genre": "Action-adventure",
+    "Price": 39.99,
+    "Description": "A pirate-themed action-adventure game."
+  },
+  {
+    "Id": "b2f73234-92a3-4d38-b27e-29a02f2a40ef",
+    "Title": "Starfield",
+    "ReleaseDate": "2023-09-06",
+    "Genre": "Role-playing",
+    "Price": 69.99,
+    "Description": "A highly anticipated space exploration RPG from Bethesda."
+  },
+  {
+    "Id": "90e74683-47c5-4a56-9c16-99e2d3aaf45b",
+    "Title": "Avowed",
+    "ReleaseDate": "2024-02-28",
+    "Genre": "Action RPG",
+    "Price": 69.99,
+    "Description": "An epic first-person RPG set in the world of Eora from Obsidian Entertainment."
+  }
+]

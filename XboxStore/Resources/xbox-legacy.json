@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "e98af20d-9c63-4b98-8087-6b3cfa6eb88f",
+    "Title": "Halo: Combat Evolved",
+    "ReleaseDate": "2001-11-15",
+    "Genre": "First-person shooter",
+    "Price": 29.99,
+    "Description": "The game that started the Halo franchise, a sci-fi first-person shooter."
+  },
+  {
+    "Id": "b7c60c1f-d1b9-4c33-9d3b-98f7af537c8b",
+    "Title": "Fable",
+    "ReleaseDate": "2004-09-14",
+    "Genre": "Action RPG",
+    "Price": 19.99,
+    "Description": "An action role-playing game set in a fantasy world where your choices matter."
+  },
+  {
+    "Id": "0f3b32f4-3b75-4c59-923f-094647ac8bbd",
+    "Title": "Crimson Skies: High Road to Revenge",
+    "ReleaseDate": "2003-10-21",
+    "Genre": "Action",
+    "Price": 24.99,
+    "Description": "An arcade-style flight game set in an alternate 1930s."
+  },
+  {
+    "Id": "ab9a7299-8924-4cf1-b9c1-ef5ddf5071a2",
+    "Title": "Ninja Gaiden Black",
+    "ReleaseDate": "2005-09-20",
+    "Genre": "Action-adventure",
+    "Price": 19.99,
+    "Description": "A challenging action-adventure game featuring the ninja Ryu Hayabusa."
+  },
+  {
+    "Id": "eafdb65d-b94a-439f-9d2f-14f0952af7d3",
+    "Title": "Star Wars: Knights of the Old Republic",
+    "ReleaseDate": "2003-07-16",
+    "Genre": "Role-playing",
+    "Price": 14.99,
+    "Description": "A classic Star Wars RPG set thousands of years before the movies."
+  },
+  {
+    "Id": "d43a2a59-dbcf-4bfb-b8e3-e46b6b8e9d62",
+    "Title": "Jade Empire",
+    "ReleaseDate": "2005-04-12",
+    "Genre": "Action RPG",
+    "Price": 19.99,
+    "Description": "An action RPG set in a world inspired by Chinese mythology."
+  },
+  {
+    "Id": "0a9d12c5-4e8b-4b91-8cfa-d4bdb7dbebaf",
+    "Title": "Project Gotham Racing",
+    "ReleaseDate": "2001-11-15",
+    "Genre": "Racing",
+    "Price": 29.99,
+    "Description": "A stylish street racing game that emphasizes skill over speed."
+  },
+  {
+    "Id": "c2d5f287-59cf-4317-923e-21a145b8fce1",
+    "Title": "MechAssault",
+    "ReleaseDate": "2002-11-12",
+    "Genre": "Action",
+    "Price": 19.99,
+    "Description": "A fast-paced mech combat game with destructible environments."
+  },
+  {
+    "Id": "e85c7bd2-a8e9-48fb-9513-35e24ab3126c",
+    "Title": "Brute Force",
+    "ReleaseDate": "2003-05-27",
+    "Genre": "Third-person shooter",
+    "Price": 14.99,
+    "Description": "A squad-based third-person shooter featuring four distinct characters."
+  },
+  {
+    "Id": "5b3e9e0f-cb8c-47c4-9a9e-1a53eaf49b22",
+    "Title": "Panzer Dragoon Orta",
+    "ReleaseDate": "2002-12-19",
+    "Genre": "Rail shooter",
+    "Price": 19.99,
+    "Description": "A visually stunning rail shooter set in a mythical world."
+  },
+  {
+    "Id": "c23b4ab2-3091-4eb2-bdbc-3eb5e3b5a4f4",
+    "Title": "Jet Set Radio Future",
+    "ReleaseDate": "2002-02-25",
+    "Genre": "Action",
+    "Price": 24.99,
+    "Description": "A unique action game with cel-shaded graphics and inline skating."
+  },
+  {
+    "Id": "8b4ad384-ff6e-4b22-bd5a-563b6e59c6b7",
+    "Title": "Oddworld: Munch's Oddysee",
+    "ReleaseDate": "2001-11-15",
+    "Genre": "Platformer",
+    "Price": 14.99,
+    "Description": "A quirky 3D platformer set in the Oddworld universe."
+  }
+]
