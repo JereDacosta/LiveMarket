@@ -16,15 +16,15 @@ namespace BookStore.Services
         {
             try
             {
+                // Simulate memory leak
+                SimulateMemoryLeak();
+
                 var jsonData = System.IO.File.ReadAllText("Resources/books.json");
 
                 var options = new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 };
-
-                // Simulate memory leak
-                SimulateMemoryLeak();
 
                 return JsonSerializer.Deserialize<List<BookDto>>(jsonData, options);
             }

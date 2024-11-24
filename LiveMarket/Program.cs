@@ -6,6 +6,7 @@ using OpenTelemetry.Trace;
 using System.Text.Json.Serialization;
 using LiveMarket.Services.VideoGame;
 using LiveMarket.Services.Books;
+using Honeycomb.OpenTelemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,6 +46,13 @@ builder.Services.AddOpenTelemetry()
         tracerBuilder
             .AddHttpClientInstrumentation()
             .AddAspNetCoreInstrumentation()
+            .AddHoneycomb(honeycombOptions =>
+            {
+                honeycombOptions.ApiKey = otelSettings["Honeycomb:ApiKey"] ?? "";
+                honeycombOptions.Dataset = otelSettings["Honeycomb:Dataset"] ?? "live-market-traces";
+                honeycombOptions.ServiceName = otelSettings["Service:Name"] ?? "LiveMarket";
+                honeycombOptions.Endpoint = otelSettings["Honeycomb:Endpoint"] ?? "https://api.honeycomb.io/v1/traces";
+            })
             .AddOtlpExporter(options =>
             {
                 options.Endpoint = new Uri(otelSettings["Exporter:Endpoint"] ?? "http://otel-collector:4317");
@@ -70,7 +78,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Videogame Store V1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "LiveMarket V1");
     c.RoutePrefix = string.Empty;
 });
 

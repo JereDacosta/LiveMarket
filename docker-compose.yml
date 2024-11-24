@@ -61,6 +61,11 @@ services:
       dockerfile: BookStore/Dockerfile
     image: book-store
     container_name: book-store
+    deploy:
+      resources:
+        limits:
+          memory: 1024m
+    restart: on-failure
     ports:
       - "8084:8080"
     environment:

@@ -41,6 +41,13 @@ builder.Services.AddOpenTelemetry()
         tracerBuilder
             .AddHttpClientInstrumentation()
             .AddAspNetCoreInstrumentation()
+            .AddHoneycomb(honeycombOptions =>
+            {
+                honeycombOptions.ApiKey = otelSettings["Honeycomb:ApiKey"] ?? "";
+                honeycombOptions.Dataset = otelSettings["Honeycomb:Dataset"] ?? "live-market-traces";
+                honeycombOptions.ServiceName = otelSettings["Service:Name"] ?? "BookStore";
+                honeycombOptions.Endpoint = otelSettings["Honeycomb:Endpoint"] ?? "https://api.honeycomb.io/v1/traces";
+            })
             .AddOtlpExporter(options =>
             {
                 options.Endpoint = new Uri(otelSettings["Exporter:Endpoint"] ?? "http://otel-collector:4317");
